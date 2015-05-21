@@ -13,7 +13,7 @@ or build image from Dockerfile
 
 `sudo docker build --tag ashushunov/upsource --rm=true .`
 
-The Upsource version is **1.0.12566**. It is installed in /usr/local/upsource.
+The Upsource version is **2.0.3462**. It is installed in /usr/local/upsource.
 
 Make folders to Upsource data.
 ```
@@ -33,5 +33,5 @@ sudo docker run \
 -v /opt/upsource_data/data:/usr/local/upsource/data \
 -v /opt/upsource_data/logs:/usr/local/upsource/logs \
 -v /opt/upsource_data/backups:/usr/local/upsource/backups \
-ashushunov/upsource /usr/local/upsource/bin/startme.sh`
+ashushunov/upsource /usr/local/upsource/bin/startme.sh
 ```
