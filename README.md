@@ -23,7 +23,7 @@ sudo mkdir -p \
 /opt/upsource_data/logs \
 /opt/upsource_data/backups
 ```
-Run container
+Run a container
 ```
 sudo docker run \
 -d \
