@@ -1,6 +1,8 @@
 Upsource image
 =============
 
+**it does not work yet**
+
 Brings the Upsource repository browser and code review
 tool to Ubuntu using the phusion/baseimage image.
 (a fork of gmetal/upsource)
