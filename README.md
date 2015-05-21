@@ -4,25 +4,24 @@ Upsource image
 Brings the Upsource repository browser and code review
 tool to Ubuntu using the phusion/baseimage image.
 
-To use it: docker pull gmetal/upsource
+To use it: docker pull ashushunov/upsource
 
-The Upsource version is **1.0.12551**. It is installed
+The Upsource version is **1.0.12566**. It is installed
 in /usr/local/upsource.
 
-Because the normal upsource starting script is non-blocking,
-a new script has been created, so that everything runs 
-smoothly inside the docker container.
+sudo mkdir -p \
+/opt/upsource_data/conf \
+/opt/upsource_data/data \
+/opt/upsource_data/logs \
+/opt/upsource_data/backups
 
-The script is /usr/local/upsource/bin/startme.sh, and accepts
-one parameter, which is the base URL to use by upsource (e.g. the one
-which you will use in your browser). You also configure this the
-first time the image is initialised.
 
-The data directory of upsource has been exposed as a volume:
-/usr/local/upsource/conf/data
-
-You can create a named container:
-docker create -v /usr/local/upsource/conf/data --name upsource_data gmetal/upsource
-
-Then use the named container for storing persistent data:
-docker run -p 8081:8081 --volumes-from upsource_data   gmetal/upsource /usr/local/upsource/bin/startme.sh http://upsource.local/
+sudo docker run \
+-d \
+--restart=always \
+-p 8081:8081 \
+-v /opt/upsource_data/conf:/usr/local/upsource/conf \
+-v /opt/upsource_data/data:/usr/local/upsource/data \
+-v /opt/upsource_data/logs:/usr/local/upsource/logs \
+-v /opt/upsource_data/backups:/usr/local/upsource/backups \
+ashushunov/upsource /usr/local/upsource/bin/upsource.sh start
