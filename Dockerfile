@@ -12,7 +12,7 @@ RUN /build-docker-image/change-limits-conf.sh
 # Install dependencies
 RUN /build-docker-image/install-java-8-oracle.sh
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-RUN apt-get -y install wget unzip
+RUN apt-get -y install wget unzip curl
 
 # Download and install upsource
 ENV UPSOURCE_HOME /usr/local/upsource
