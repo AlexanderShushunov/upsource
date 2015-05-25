@@ -17,14 +17,8 @@ or build image from Dockerfile
 
 The Upsource version is **2.0.3462**. It is installed in /usr/local/upsource.
 
-Make folders to Upsource data.
-```
-sudo mkdir -p \
-/opt/upsource_data/conf \
-/opt/upsource_data/data \
-/opt/upsource_data/logs \
-/opt/upsource_data/backups
-```
+Folder to Upsource data is `/opt/upsource_data` will be created automatically.
+
 Run a container
 ```
 sudo docker run \

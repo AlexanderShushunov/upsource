@@ -1,5 +1,6 @@
 # Upsource server environment for ubuntu 
 FROM ubuntu
+
 MAINTAINER ashushunov <ashushunov@mail.ru>
 
 # copy build scripts
