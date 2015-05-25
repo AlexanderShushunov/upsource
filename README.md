@@ -2,8 +2,6 @@ Upsource image
 =============
 https://www.jetbrains.com/upsource/help/2.0/install_on_linux.html - describes the installation steps.
 
-**it does not work yet**
-
 Brings the Upsource repository browser and code review tool to Ubuntu.
 (a fork of gmetal/upsource)
 
@@ -20,6 +18,7 @@ The Upsource version is **2.0.3462**. It is installed in /usr/local/upsource.
 Folder to Upsource data is `/opt/upsource_data` will be created automatically.
 
 Run a container
+
 ```
 sudo docker run \
 -d \
