@@ -31,7 +31,7 @@ sudo docker run \
 -d \
 --restart=always \
 -p 8080:8080 \
--- name upsource \
+--name upsource \
 -v /opt/upsource_data/conf:/usr/local/upsource/conf \
 -v /opt/upsource_data/data:/usr/local/upsource/data \
 -v /opt/upsource_data/logs:/usr/local/upsource/logs \
